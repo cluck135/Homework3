@@ -14,47 +14,117 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 function generatePassword(){
-  let passLength = parseInt(prompt("How many characters do you want in the password? Enter a number from 1-50"));
-  let passNumbers = prompt("Do you want numbers in your password? Y or N");
-  let passSpecial = prompt("Do you want special characters in your password? Y or N");
   let useSpecial = false;
   let useNumber = false;
+  let useUCase = false;
+  let useLCase = false;
+  let passLength = "";
+  let passNumbers = "";
+  let passSpecial = "";
+  let passUCase = "";
+  let passLCase = "";
+  
   let pass = '';
-  let i = 0;
- 
-  if(passSpecial.toLowerCase() == "y"){
-    useSpecial = true;
+  let j = 0;
+
+  do{
+  passLength = parseInt(prompt("How many characters do you want in the password? Enter a number from 8-128"));
+    if(passLength >= 8 && passLength <= 128){
+      j++;
+    } else{
+      alert("Error you didn't enter a number between 8-128. Please retry :)");
+    }
+  }while(j != 1)
+
+  do{
+  passNumbers = prompt("Do you want numbers in your password? Enter Y or N");
+    if(passNumbers.toLowerCase() == "y" || passNumbers.toLowerCase() == "n"){
+      j++;
+    }else{
+      alert("Error you didn't enter Y or N. Please retry :)");
+    }
+  }while(j != 2)
+  
+  do{
+  passSpecial = prompt("Do you want special characters in your password? Enter Y or N");
+  if(passSpecial.toLowerCase() == "y" ||  passSpecial.toLowerCase() == "n"){
+    j++;
+  }else{
+    alert("Error you didn't enter Y or N. Please retry :)")
   }
+  }while(j != 3)
+
+  do{
+    passLCase = prompt("Do you want lower case letters in the password? Enter Y or N");
+    if(passLCase.toLowerCase() == "y" ||  passLCase.toLowerCase() == "n"){
+      j++;
+    } else{
+      alert("Error you didn't enter Y or N. Please retry :)");
+    }
+  }while(j != 4)
+
+  do{
+    passUCase = prompt("Do you want upper case letters in the password? Enter Y or N");
+    if(passUCase.toLowerCase() == "y" ||  passUCase.toLowerCase() == "n"){
+      j++;
+    } else{
+      alert("Error you didn't enter Y or N. Please retry :)");
+    }
+  }while(j != 5)
+
+  
+
   if(passNumbers.toLowerCase() == "y"){
     useNumber = true;
   }
-
+  if(passSpecial.toLowerCase() == "y"){
+    useSpecial = true;
+  }
+  if(passUCase.toLowerCase() == "y"){
+    useUCase = true;
+  }
+  if(passLCase.toLowerCase() == "y"){
+    useLCase = true;
+  }
+  
+  let i = 0;
   do{
-    switch(Math.floor(Math.random() * 3)){
+    switch(Math.floor(Math.random() * 4)){
       case 0:
-      let letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-      pass += letters.charAt(Math.floor(Math.random()*letters.length));
-      console.log(pass);
-      i++;
+        if(useLCase){
+          let lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
+          pass += lowerLetters.charAt(Math.floor(Math.random()*lowerLetters.length));
+          console.log(pass);
+          i++;
+      }
       break;
 
       case 1:
         if(useNumber){
-      let numbers = '1234567890';
-      pass += numbers.charAt(Math.floor(Math.random()*numbers.length));
-      console.log(pass);
-      i++;
+          let numbers = '1234567890';
+          pass += numbers.charAt(Math.floor(Math.random()*numbers.length));
+          console.log(pass);
+          i++;
       }
       break;
 
       case 2: 
-      if(useSpecial){
-      let special = '#$%&!';
-      pass += special.charAt(Math.floor(Math.random()*special.length));
-      console.log(pass);
-      i++;
-      }
+        if(useSpecial){
+          let special = '#$%&!';
+          pass += special.charAt(Math.floor(Math.random()*special.length));
+          console.log(pass);
+          i++;
+        }
       break;
+
+      case 3:
+        if(useUCase){
+          let upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+          pass += upperLetters.charAt(Math.floor(Math.random()*upperLetters.length));
+          console.log(pass);
+          i++;
+        }
+        break;
     }
   }while(i < passLength)
   return(pass);
