@@ -29,7 +29,7 @@ My Github Profile: [cluck135](https://github.com/cluck135)
 
 Email me your questions at: [casenluck@gmail.com](mailto:casenluck@gmail.com)
 
-## Project pictures/websitelink 
+## Project
 ![Image of website](./Assets/03-javascript-homework-demo.png)
 
 
