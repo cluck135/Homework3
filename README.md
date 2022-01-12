@@ -1,27 +1,35 @@
 # Password Generator
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
-This projects title is Password Generator and it is a website that I coded the javascript for using my new found javascript coding skills so that it follows acceptance criteria. 
+Password Generator is a website that I coded the javascript for using my new found javascript coding skills so that it follows acceptance criteria. 
 
-## Languages
+This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
 
-Used javascript to code the backend of this website.
+## Table of Contents
+- [Usage Information](#usage-information)
+- [Contribution Guidelines](#contribution-guidelines)
+- [Test Instructions](#test-instructions)
+- [Questions](#questions)
+- [Project](#project)
 
-## Objective
+## Usage Information
+right click index.html and open in browser
 
-- Make it so when the generate password button is clicked a password a series of prompts appears
-- When prompts appear, user is able to select which criteria they want including numnbers, special character, and upper/lowercase letters
-- When prompted for password length the user can only select a password betwen 8 and 128 characters
-- When user answers each prompt the answer is validates otherwise it re asks the question
-- When all prompts are answered then a password is generated for the user on the page
+## Contribution Guidelines
+Open Source
 
+## Test Instructions
+N/A
 
-## What was learned
+## License
+This project is licensed under the terms of the [MIT](https://opensource.org/licenses/MIT) license
 
-I learned a lot more about how to use eventlisteners as well as various loops in javascript such as do while loops and switch case.
+## Questions
+My Github Profile: [cluck135](https://github.com/cluck135)
+
+Email me your questions at: [casenluck@gmail.com](mailto:casenluck@gmail.com)
 
 ## Project pictures/websitelink 
-<!-- MODIFY BELOW LINKS BEFORE SUBMITTING !!!!!!!!!!!!!!!!!!!!!!!!! -->
-Screenshots below!
 ![Image of website](./Assets/03-javascript-homework-demo.png)
 
 
